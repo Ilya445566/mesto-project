@@ -1,0 +1,21 @@
+.save-text{
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: center;
+margin-top: auto;
+margin-bottom: auto;
+}
+
+
+@media screen and (max-width: 320px) {
+
+    .save-text{
+    font-size: 14px;
+    }
+  
+  }
+
