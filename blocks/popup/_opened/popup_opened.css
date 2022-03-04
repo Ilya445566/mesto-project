@@ -1,0 +1,10 @@
+.popup_opened {
+    display: block;
+}
+
+@media screen and (max-width: 520px) {
+    .popup_opened {
+    background-color: #E5E5E5;
+    }
+
+}

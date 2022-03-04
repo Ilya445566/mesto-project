@@ -1,0 +1,16 @@
+.profile__avatar {
+    width: 169px;
+    height: 128px;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 320px) {
+    .profile__avatar {
+        max-width: 52.8vw;
+        margin: auto;
+        align-items: center;
+        padding: auto;
+    }
+  
+  }
