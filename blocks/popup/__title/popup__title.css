@@ -1,0 +1,36 @@
+.popup__title{
+    max-width: 330px;
+    text-align: center;
+    margin-left: 36px;
+    margin-right: auto;
+    margin-top: 34px;
+    margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 910px) {
+        .popup__title {   
+        font-size: 18px;
+        margin-left: auto;
+        margin-top: 34px;
+        }
+        }
+
+    @media screen and (max-width: 450px) {
+        .popup__title {   
+        font-size: 18px;
+        }
+        }
+
+        @media screen and (max-width: 320px) {
+            .popup__title{
+            max-width: 238px;
+            text-align: left;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: left;
+            margin-top: 25px;
+            }
+        
+        }
