@@ -16,6 +16,7 @@ const profileName = document.querySelector('.profile__title')
 const profileAbout = document.querySelector('.profile__subtitle')
 const popupImgImage = document.querySelector('.popup-img__image')
 const elementImg = document.querySelector('.elements__img')
+const popupImage = document.querySelector('.popup-img')
 const elements = document.querySelector('.elements')
 const element = elements.querySelector('.elements__element')
 const cons = document.querySelector('.elements__content')
@@ -58,9 +59,8 @@ for (let heart of hearts) {
   heart.addEventListener("click", () => heart.classList.toggle('elements__heart-icon_active'));
 }
 
-function popupOpen() {
+function popupOpen(popup) {
     popup.classList.add('popup_opened');
-    popupTitle.textContent = 'Редактировать профиль';
 };
 
 function popupClose() {
@@ -92,7 +92,8 @@ function addElement(elementName, elementLink) {
     heart.addEventListener("click", () => heart.classList.toggle('elements__heart-icon_active'));
   }
 
-
+  elementImg.addEventListener('click', () => {
+    openPopupImage(elementLink, elementName);
 };
 
 
@@ -108,6 +109,8 @@ function openPopupImage(imgLink, imgTitle) {
   popupImg.classList.add('popup-img_opened')
   popupImgImage.setAttribute('src', imgLink);
   popupImageTitle.textContent = imgTitle;
+
+  popupOpen(popupImage);
 };
   
 
@@ -141,7 +144,3 @@ closeButtonMesto.addEventListener('click', popupMestoClose);
 saveButton.addEventListener('click', editProfileInfo);
 
 initialCards.forEach(item => addElement(item.name, item.link));
-
-elementImg.addEventListener('click',
-popupImgOpen(elementLink, elementName)
-);
