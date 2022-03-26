@@ -82,7 +82,7 @@ function addElement(elementName, elementLink) {
   const elementTemplate = document.querySelector('#element-template').content;
   const elementElement = elementTemplate.querySelector('.elements__element').cloneNode(true);
   let hearts = document.getElementsByClassName("elements__heart-icon");
-  const elementImg = document.querySelector('.elements__img');
+  let elementImg = elementElement.querySelector('.elements__img');
 
   elementElement.querySelector('.elements__title').textContent = elementName;
   elementElement.querySelector('.elements__img').src = elementLink;
