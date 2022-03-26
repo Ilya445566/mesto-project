@@ -81,7 +81,7 @@ function popupMestoClose() {
 function addElement(elementName, elementLink) {
   const elementTemplate = document.querySelector('#element-template').content;
   const elementElement = elementTemplate.querySelector('.elements__element').cloneNode(true);
-  let hearts = document.getElementsByClassName("elements__heart-icon");
+  let hearts = elementElement.getElementsByClassName("elements__heart-icon");
   let elementImg = elementElement.querySelector('.elements__img');
 
   elementElement.querySelector('.elements__title').textContent = elementName;
@@ -108,8 +108,6 @@ function openPopupImage(imgLink, imgTitle) {
   popupImg.classList.add('popup-img_opened')
   popupImgImage.setAttribute('src', imgLink);
   popupImageTitle.textContent = imgTitle;
-
-  popupOpen(popupImage);
 };
 
 
