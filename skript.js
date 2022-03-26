@@ -4,14 +4,21 @@ let redact = document.querySelector('.profile__redact')
 let closePopup = document.querySelector('.popup__close-img')
 let popupMesto = document.querySelector('.popup-mesto') 
 let closeButtonMesto = document.querySelector('.popup-mesto__close-img')
-let popupTitle = document.querySelector('.popup__title')
-let popupContainer = document.querySelector('.popup__container')
-
+const popupTitle = document.querySelector('.popup__title')
+const popupContainer = document.querySelector('.popup__container')
+const popupImageTitle = document.querySelector('.popup-img__title')
+const popupImg = document.querySelector('.popup-img')
+const nameInput = document.querySelector('.popup__input_first');
+const aboutInput = document.querySelector('.popup__input_second');
 const saveButton = document.querySelector('.popup__save-button')
 const saveButtonMesto = document.querySelector('.popup-mesto__save-button')
-let elements = document.querySelector('.elements')
-let element = elements.querySelector('.elements__element')
-let content = element.querySelector('.elements__content')
+const profileName = document.querySelector('.profile__title')
+const profileAbout = document.querySelector('.profile__subtitle')
+const popupImgImage = document.querySelector('.popup-img__image')
+const elementImg = document.querySelector('.elements__img')
+const elements = document.querySelector('.elements')
+const element = elements.querySelector('.elements__element')
+const cons = document.querySelector('.elements__content')
 let plus = document.querySelector('.profile__edit-button')
 let form = document.querySelector('.popup__form')
 
@@ -70,18 +77,39 @@ function popupChange() {
 
 function popupMestoClose() {
   popupMesto.classList.remove('popup-mesto_opened');
-}
+};
 
 function addElement(elementName, elementLink) {
   const elementTemplate = document.querySelector('#element-template').content;
   const elementElement = elementTemplate.querySelector('.elements__element').cloneNode(true);
+  let hearts = document.getElementsByClassName("elements__heart-icon");
 
   elementElement.querySelector('.elements__title').textContent = elementName;
   elementElement.querySelector('.elements__img').src = elementLink;
   elements.prepend(elementElement);
+
+  for (let heart of hearts) {
+    heart.addEventListener("click", () => heart.classList.toggle('elements__heart-icon_active'));
+  }
+
+
 };
 
 
+
+function editProfileInfo() { 
+  profileName.textContent = nameInput.value;
+  profileAbout.textContent = aboutInput.value;
+
+  popupClose();
+};
+
+function openPopupImage(imgLink, imgTitle) {
+  popupImg.classList.add('popup-img_opened')
+  popupImgImage.setAttribute('src', imgLink);
+  popupImageTitle.textContent = imgTitle;
+};
+  
 
 function addNewElement() {
   const newName = document.querySelector('.popup-mesto__input_first');
@@ -108,4 +136,12 @@ plus.addEventListener('click', popupChange);
 
 closeButtonMesto.addEventListener('click', popupMestoClose);
 
-initialCards.forEach(item => elements.prepend(addElement(item.name, item.link)));
+
+
+saveButton.addEventListener('click', editProfileInfo);
+
+initialCards.forEach(item => addElement(item.name, item.link));
+
+elementImg.addEventListener('click',
+popupImgOpen(elementLink, elementName)
+);
