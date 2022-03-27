@@ -1,0 +1,19 @@
+.popup-img__image {
+    width: 75vw;
+    height: 85vh;
+    margin: auto;
+    position: relative;
+}
+
+.popup-img__image {
+    width: 75vw;
+    height: 85vh;
+    margin: auto;
+    position: relative;
+}
+
+@media screen and (max-width: 320px) {
+    .popup-img__image {
+        max-width: 240px;
+    }
+}

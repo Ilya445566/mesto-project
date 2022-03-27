@@ -1,0 +1,35 @@
+.popup-mesto__close-img {
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	right: -40px;
+	top: -40px;
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: url(../../../images/Close\ Icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media screen and (max-width: 540px) {
+	.popup-mesto__close-img {
+		width: 25px;
+		height: 25px;
+		right: -20px;
+		top: -40px;
+	}
+	@media screen and (max-width: 320px) {
+		.popup-mesto__close-img {
+			width: 20px;
+			height: 20px;
+			right: 0px;
+			top: -36px;
+		}
+	}
+	@media screen and (max-width: 490px) {
+		.popup-mesto__close-img {
+			width: 20px;
+			height: 20px;
+			right: 0;
+		}
+	}
