@@ -7,11 +7,11 @@
       <link rel="stylesheet" href="style.css">
    </head>
    <body class="body">
-      <div class="popup">
+      <div class="popup popup-edit">
          <div class="popup__container">
-            <button type="button" class="popup__close-img"></button>
+            <button type="button" class="popup__close-img popup-close"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form name="popup__form" class="popup__form">
+            <form name="profile__form" class="popup__form" action="#">
                <input type="text" name="name-input" class="popup__input popup__input_first" id="top-input" value="Жак-Ив Кусто">
                <input type="text" name="info-input" class="popup__input popup__input_second" id="bottom-input"
                   value="Исследователь океана">
@@ -22,11 +22,11 @@
          </div>
       </div>
 
-      <div class="popup-mesto">
+      <div class="popup popup-mesto">
          <div class="popup-mesto__container">
-            <button type="button" class="popup-mesto__close-img"></button>
+            <button type="button" class="popup-mesto__close-img popup-close"></button>
             <h2 class="popup-mesto__title">Новое место</h2>
-            <form name="popup-mesto__form" class="popup-mesto__form">
+            <form name="element__form" class="popup-mesto__form">
                <input type="text" name="name-input" class="popup-mesto__input popup-mesto__input_first" id="top-input" value="Жак-Ив Кусто">
                <input type="text" name="info-input" class="popup-mesto__input popup-mesto__input_second" id="bottom-input"
                   value="Исследователь океана">
@@ -37,10 +37,12 @@
          </div>
       </div>
 
-      <div class="popup-img">
-            <button type="button" class="popup-img__close-img"></button>
+      <div class="popup popup-img">
+         <div class="popup-img__container">
+            <button type="button" class="popup-img__close-img popup-close"></button>
             <img class="popup-img__image">
             <h2 class="popup-img__title"></h2>
+         </div>
       </div>
 
 
@@ -87,6 +89,6 @@
       </footer>
 
 
-      <script src="skript.js"></script>
+      <script src="scripts/script.js"></script>
    </body>
 </html>
