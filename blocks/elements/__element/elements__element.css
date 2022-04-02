@@ -1,8 +1,0 @@
-.elements__element {
-	border-radius: 10px;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	background-color: white;
-	min-height: 500px;
-}
