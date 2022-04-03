@@ -1,0 +1,43 @@
+.elements__korzina{
+	margin: 0;
+	padding: 0;
+	width: 18px;
+	height: 19px;
+	border: none;
+	background: none;
+	background-image: url(../../../images/Korz.svg);
+    position: absolute;
+	top: 20px;
+	left: 244px;
+	background-size: cover;
+}
+
+@media screen and (max-width: 910px) {
+	.elements__korzina{
+        left: 235px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+	.elements__korzina{
+        left: 370px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+	.elements__korzina{
+        left: 300px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+	.elements__korzina{
+        left: 250px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+	.elements__korzina{
+        left: 240px;
+    }
+}

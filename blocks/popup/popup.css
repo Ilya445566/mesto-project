@@ -1,0 +1,17 @@
+.popup {
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+    @media screen and (max-width: 320px) {
+        .popup {
+        height: 100%;
+        }
+    }
