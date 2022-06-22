@@ -1,7 +1,7 @@
 const main = document.querySelector('.main');
 const popupEdit = document.querySelector('.popup-edit');
 const redact = document.querySelector('.profile__redact')
-const closeIcon = document.querySelector('.popup__close-img')
+const profileCloseBtn = document.querySelector('.popup__close-img')
 const popupMesto = document.querySelector('.popup-mesto')
 const closeButtonMesto = document.querySelector('.popup-mesto__close-img')
 const popupTitle = document.querySelector('.popup__title')
@@ -123,7 +123,7 @@ editform.addEventListener('submit', editProfileInfo);
 
 redact.addEventListener('click', () => {openPopup(popupEdit)});
 
-closeIcon.addEventListener('click', () => {closePopup(popupEdit)});
+profileCloseBtn.addEventListener('click', () => {closePopup(popupEdit)});
 
 editButton.addEventListener('click', () => {openPopup(popupMesto)});
 
