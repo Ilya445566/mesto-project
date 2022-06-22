@@ -50,10 +50,8 @@ const initialCards = [
 ];
 
 
-let hearts = document.getElementsByClassName("elements__heart-icon");
-for (let heart of hearts) {
+
   heart.addEventListener("click", () => heart.classList.toggle('elements__heart-icon_active'));
-}
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
