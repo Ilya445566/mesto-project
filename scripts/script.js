@@ -51,7 +51,7 @@ const initialCards = [
 
 
 
-  heart.addEventListener("click", () => heart.classList.toggle('elements__heart-icon_active'));
+  
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
@@ -99,7 +99,7 @@ function openPopupImage(imgLink, imgTitle) {
   popupImgImage.setAttribute('src', imgLink);
   popupImageTitle.textContent = imgTitle;
 };
-
+heart.addEventListener("click", () => heart.classList.toggle('elements__heart-icon_active'));
 
 function createCard(evt) {
   evt.preventDefault();
