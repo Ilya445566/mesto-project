@@ -65,7 +65,7 @@ function closePopup(popup) {
 
 function addElement(elementName, elementLink) {
   const elementElement = elementTemplate.querySelector('.elements__element').cloneNode(true);
-  const hearts = elementElement.getElementsByClassName("elements__heart-icon");
+  const heart = elementElement.getElementsByClassName("elements__heart-icon");
   const elementImg = elementElement.querySelector('.elements__img');
 
   elementElement.querySelector('.elements__title').textContent = elementName;
