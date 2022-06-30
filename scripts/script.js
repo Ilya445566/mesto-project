@@ -20,7 +20,8 @@ const editButton = document.querySelector('.profile__edit-button')
 const editform = document.querySelector('.popup__form')
 const mestoForm = document.querySelector('.popup-mesto__form')
 const elementTemplate = document.querySelector('#element-template').content;
-
+const newName = document.querySelector('.popup-mesto__input_first');
+const newLink = document.querySelector('.popup-mesto__input_second');
 
 const initialCards = [
   {
@@ -102,8 +103,6 @@ function openPopupImage(imgLink, imgTitle) {
 
 function createCard(evt) {
   evt.preventDefault();
-  const newName = document.querySelector('.popup-mesto__input_first');
-  const newLink = document.querySelector('.popup-mesto__input_second');
 
   addElement(newName.value, newLink.value);
 
