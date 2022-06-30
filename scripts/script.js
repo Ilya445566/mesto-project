@@ -73,9 +73,7 @@ function addElement(elementName, elementLink) {
   elementElement.querySelector('.elements__img').alt = elementName;
   elements.prepend(elementElement);
 
-  for (let heart of hearts) {
     heart.addEventListener("click", () => heart.classList.toggle('elements__heart-icon_active'));
-  };
 
   elementImg.addEventListener('click', () => {
     openPopupImage(elementLink, elementName)
