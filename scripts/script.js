@@ -20,8 +20,7 @@ const editButton = document.querySelector('.profile__edit-button')
 const editform = document.querySelector('.popup__form')
 const mestoForm = document.querySelector('.popup-mesto__form')
 const elementTemplate = document.querySelector('#element-template').content;
-const newName = document.querySelector('.popup-mesto__input_first');
-const newLink = document.querySelector('.popup-mesto__input_second');
+
 
 const initialCards = [
   {
@@ -64,16 +63,17 @@ function closePopup(popup) {
 
 function addElement(elementName, elementLink) {
   const elementElement = elementTemplate.querySelector('.elements__element').cloneNode(true);
-  const heart = elementElement.getElementsByClassName("elements__heart-icon");
+  const hearts = elementElement.getElementsByClassName("elements__heart-icon");
   const elementImg = elementElement.querySelector('.elements__img');
 
   elementElement.querySelector('.elements__title').textContent = elementName;
   elementElement.querySelector('.elements__img').src = elementLink;
   elementElement.querySelector('.elements__img').alt = elementName;
   elements.prepend(elementElement);
-  
+
+  for (let heart of hearts) {
     heart.addEventListener("click", () => heart.classList.toggle('elements__heart-icon_active'));
-  
+  };
 
   elementImg.addEventListener('click', () => {
     openPopupImage(elementLink, elementName)
@@ -102,6 +102,8 @@ function openPopupImage(imgLink, imgTitle) {
 
 function createCard(evt) {
   evt.preventDefault();
+  const newName = document.querySelector('.popup-mesto__input_first');
+  const newLink = document.querySelector('.popup-mesto__input_second');
 
   addElement(newName.value, newLink.value);
 
