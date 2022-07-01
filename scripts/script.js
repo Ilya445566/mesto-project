@@ -86,7 +86,7 @@ function addElement(elementName, elementLink) {
  
   });
  
-};
+});
 
 function editProfileInfo(evt) {
  
