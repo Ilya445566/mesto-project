@@ -10,8 +10,7 @@ const popupImageTitle = document.querySelector('.popup-img__title')
 const popupImg = document.querySelector('.popup-img')
 const nameInput = document.querySelector('.popup__input_first');
 const aboutInput = document.querySelector('.popup__input_second');
-const newName = document.querySelector('.popup-mesto__input_first');
-const newLink = document.querySelector('.popup-mesto__input_second');
+
 const buttonCloseImg = document.querySelector('.popup-img__close-img')
 const profileName = document.querySelector('.profile__title')
 const profileAbout = document.querySelector('.profile__subtitle')
@@ -100,7 +99,8 @@ function openPopupImage(imgLink, imgTitle) {
 
 function createCard(evt) {
   evt.preventDefault();
-
+const newName = document.querySelector('.popup-mesto__input_first');
+const newLink = document.querySelector('.popup-mesto__input_second');
 
   addElement(newName.value, newLink.value);
   newName.value = '';
