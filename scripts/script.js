@@ -3,15 +3,14 @@ const popupEdit = document.querySelector('.popup-edit');
 const redact = document.querySelector('.profile__redact')
 const profileCloseBtn = document.querySelector('.popup__close-img')
 const popupMesto = document.querySelector('.popup-mesto')
-const buttonCloseMesto = document.querySelector('.popup-mesto__close-img')
+const closeButtonMesto = document.querySelector('.popup-mesto__close-img')
 const popupTitle = document.querySelector('.popup__title')
 const popupContainer = document.querySelector('.popup__container')
 const popupImageTitle = document.querySelector('.popup-img__title')
 const popupImg = document.querySelector('.popup-img')
 const nameInput = document.querySelector('.popup__input_first');
 const aboutInput = document.querySelector('.popup__input_second');
-
-const buttonCloseImg = document.querySelector('.popup-img__close-img')
+const closeButtonImg = document.querySelector('.popup-img__close-img')
 const profileName = document.querySelector('.profile__title')
 const profileAbout = document.querySelector('.profile__subtitle')
 const popupImgImage = document.querySelector('.popup-img__image')
@@ -21,6 +20,8 @@ const editButton = document.querySelector('.profile__edit-button')
 const editform = document.querySelector('.popup__form')
 const mestoForm = document.querySelector('.popup-mesto__form')
 const elementTemplate = document.querySelector('#element-template').content;
+const newName = document.querySelector('.popup-mesto__input_first');
+const newLink = document.querySelector('.popup-mesto__input_second');
 const initialCards = [
   {
     name: 'Архыз',
@@ -99,8 +100,6 @@ function openPopupImage(imgLink, imgTitle) {
 
 function createCard(evt) {
   evt.preventDefault();
-const newName = document.querySelector('.popup-mesto__input_first');
-const newLink = document.querySelector('.popup-mesto__input_second');
 
   addElement(newName.value, newLink.value);
   newName.value = '';
