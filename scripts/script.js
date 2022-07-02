@@ -52,9 +52,6 @@ const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
 ];
- 
-  heart.addEventListener("click", () => heart.classList.toggle('elements__heart-icon_active'));
- 
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
