@@ -80,7 +80,6 @@ function addElement(elementName, elementLink) {
   elementElement.querySelector('.elements__title').textContent = elementName;
   elementElement.querySelector('.elements__img').src = elementLink;
   elementElement.querySelector('.elements__img').alt = elementName;
-  elements.prepend(elementElement);
   elementElement.querySelector(".elements__heart-icon").addEventListener("click", activateElement);
 
   function activateElement(evt) {
@@ -93,8 +92,16 @@ function addElement(elementName, elementLink) {
     evt.target.closest('.elements__element').remove();
 
   });
+ return elementElement
+};
+function renderCard(elementName, elementLink) {
+  const initializatedCards = addElement(elementName, elementLink);
+  elements.prepend(initializatedCards);
 };
 
+initialCards.forEach(function (card) {
+  renderCard(card.name, card.link);
+});
 function editProfileInfo(evt) {
  
   evt.preventDefault();
