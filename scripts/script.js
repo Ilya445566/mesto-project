@@ -122,10 +122,11 @@ function openPopupImage(imgLink, imgTitle) {
 };
 
 function createCard(evt) {
-
   evt.preventDefault();
-  addElement(newName.value, newLink.value);
+  renderCard(newName.value, newLink.value);
 
+  
+mestoForm.reset();
   closePopup(popupMesto);
 }
 
