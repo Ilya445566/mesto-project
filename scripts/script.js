@@ -126,9 +126,6 @@ function createCard(evt) {
   evt.preventDefault();
   addElement(newName.value, newLink.value);
 
-  newName.value = '';
-  newLink.value = '';
-
   closePopup(popupMesto);
 }
 
